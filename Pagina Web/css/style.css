@@ -1,0 +1,294 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    /*espacio del menu fijo
+    padding:100px 20px 0 ; */
+    background-image: url(../imagenes/fondo01.png);
+    background-size: 100%;
+}
+
+.header{
+    background-color: #DFBB9D;
+    height: 80px;
+    margin-bottom: 10px;
+    /* barra de navegacion fija
+    position: fixed;
+    width: 100%;
+    top:0;
+    left:0;*/
+}
+
+.nav{
+/*Logo izquierda y menu hacia la derecha */
+display: flex;
+justify-content: space-between;
+/*tamaño en pc grandes*/
+max-width:992px ;
+margin:0 auto ;
+}
+
+.nav-link{
+    /*color de la letra quitar subrallado*/
+    color: white;
+    text-decoration: none;
+}
+
+.logo{
+    font-size:30px;
+    padding: 0 40px;
+    /*Centrar el logo*/
+    line-height: 80px;
+    /*la letra sea mas gruesa*/
+    font-weight: bold;
+    color:white ;
+}
+
+/*Estilo barra de navegacion*/
+.nav-menu{
+    /*Elementos en fila*/
+    display: flex;
+    margin-right: 40px;
+    /*eliminar púntos*/
+    list-style: none;
+}
+.nav-menu-item{
+    font-size: 18px;
+    margin: 0 0 10px 10px;
+    line-height: 80px ;
+    /*texto en mayuscula*/
+    text-transform: uppercase;
+    color:white;
+    /*Evitar que valla siguiente linea*/
+    width: max-content;
+}
+
+.nav-menu-link{
+    padding:8px 12px ;
+    border-radius: 3px;
+    /*transicion del hover*/
+    transition: 0.5s;
+}
+.nav-menu-link:hover{
+    background-color:#F7E2D6 ;
+
+}
+
+/*Banner con movimiento*/
+.banner{
+    width: 992px;
+    height: 500px;
+    border: 3px solid #DFBB9D;
+    margin: auto;
+    /*agregar imagenes*/
+   /* background-image : url('../imagenes/banner04.gif');*/
+    /*Ajustar la imagen*/
+    background-size: 100% 100%;
+    /*animar img*/
+    /*1 nombre de la animacion*/
+    animation-name: banner;
+    /*2tiempo que va a durar*/
+    animation-duration: 10s;
+    /*3 cuantas veces se va a repetir*/
+    animation-iteration-count: infinite;
+    /*se alterne el ciclo de la iamgen*/
+    animation-direction: alternate;
+
+    /* en una sola linea 
+    animation: banner 10s infinite*/
+
+}
+/*paradas de la animacion*/
+@keyframes banner {
+        0%,30%{
+            background-image: url("../imagenes/Banner01.jpg");
+            opacity: 1;
+        }
+        31%,34%{
+            opacity: 0.1;
+        }
+        35%,65%{
+            background-image: url("../imagenes/banner2.jpg");
+            opacity: 1;
+        }
+        66%,69%{
+            opacity: 0.1;
+        }
+
+        70%,100%{
+            background-image: url("../imagenes/banner04.gif");
+             opacity: 1;
+        }
+}
+
+/*Pie de pagina*/
+.pie-pagina{
+    width: 100%;
+    background-color:#DFBB9D ;
+    margin-top: 10px;
+}
+
+ .grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    /*columnas*/
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap:50px;
+    padding: 45px 0px;
+
+}
+
+.box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box figure img{
+    width: 250px;
+}
+
+.titulo-pie-pag{
+    color: white;
+    margin-bottom: 25px;
+    font-family: sans-serif;
+    font-size:20px;
+}
+
+.parrafo-pie-pag{
+    color: white;
+    font-family:sans-serif ;
+}
+.parrafo{
+    color: white;
+}
+
+/*Redes sociales*/
+.red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    /*separacion entre iconos*/
+    line-height: 45px;
+
+    color: white;
+    margin-right:10px ;
+    background-color:#9DD6DF;
+    text-align: center;
+    transition: all 300s ease;
+}
+/*No funciona*/
+.red-social a:hover{
+   color: #DFBB9D;
+}
+
+.grupo-2{
+   background-color: #9DD6DF;
+   padding: 15px 10px;
+   text-align: center;
+   color: white;
+   font-family: sans-serif;
+}
+
+/*CONTENIDO*/
+.columna01{
+    background: #9DD6DF;
+    color: #2C3333;
+    padding: 20px;
+    width: 45%;
+    margin: 10px;
+    text-align: justify;
+    border-radius: 20px;
+
+}
+
+.columna02{
+    background: #A084CF;
+    color: white;
+    padding: 20px;
+    width: 45%;
+    margin: 10px;
+    text-align: justify;
+    border-radius: 20px;
+
+}
+
+
+.columnaTitulo01{
+    background: #9DD6DF;
+    color:#2C3333 ;
+    padding: 20px;
+    width: 45%;
+    margin: 10px;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 20px;
+
+    
+}
+
+.columnaTitulo02{
+    background: #A084CF;
+    color: white;
+    padding: 20px;
+    width: 45%;
+   /* margin: 10px;*/
+    font-size: 30px;
+    text-align: center;
+    margin-top: 20PX;
+    margin-bottom: 10PX;
+    margin-left: 10PX;
+    margin-right: 10PX;
+    border-radius: 20px;
+
+    
+}
+.padre{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+/*Video*/
+.columna03{
+    background: #9DD6DF;
+    color: white;
+    padding: 20px;
+    width: 70%;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+.columnaTitulo03{
+    background: #9DD6DF;
+    color: white;
+    padding: 20px;
+    width: 70%;
+   /* margin: 10px;*/
+    font-size: 30px;
+    text-align: center;
+    border-radius: 20px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    
+}
+
+.imgColum{
+    width:300px;
+    height:auto;
+    margin:auto;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
